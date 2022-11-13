@@ -10,6 +10,8 @@ const initialState = {
 }
 
 export const fetchAsyncMovies = createAsyncThunk('moviesList/fetchMovies' , async(val) => {
+
+   
     const resp = await instance.get(`?apikey=${apiKey}&s=${val}&`);
     return resp.data
 })
