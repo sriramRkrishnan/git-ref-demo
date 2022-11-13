@@ -18,12 +18,9 @@ const Moviedetails = () => {
   const localval = localStorage.getItem("id");
 
   useEffect(() => {
-    id
-      ? dispatch(fetchAsyncMoviesbyID(id))
-      : dispatch(fetchAsyncMoviesbyID(localval));
-
+    id ? dispatch(fetchAsyncMoviesbyID(id)) : dispatch(fetchAsyncMoviesbyID(localval));
     id ? localStorage.setItem("id", id) : localStorage.setItem("id", localval);
-    // eslint-disable-next-line
+    
   }, [id]);
 
   return (
